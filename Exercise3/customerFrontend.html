@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>My Awesome Store</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="formChecker.js"></script>
+    </head>
+    <body>
+        <h1 class="title">My Awesome Store</h1>
+        <hr />
+        <div class="container">
+            <form action="customerBackend.php" method="post" onsubmit="return submitForm()" id="purchaseForm">
+                <label for="username">Username: </label> <input type="text" name="username" id="username" />
+                <br />
+                <label for="password">Password: </label> <input type="password" name="password" id="password" />
+                <br />
+                <h2>Products</h2>
+                <table>
+                    <thead>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MacBook Pro 2017</td>
+                            <td>$2,000</td>
+                            <td><input type="number" id="macQty" /></td>
+                        </tr>
+                        <tr>
+                            <td>iPhone 11 Pro</td>
+                            <td>$1,000</td>
+                            <td><input type="number" id="iphoneQty" /></td>
+                        </tr>
+                        <tr>
+                            <td>Apple Pencil</td>
+                            <td>$100</td>
+                            <td><input type="number" id="pencilQty" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Shipping Options</h2>
+                <input type="radio" name="shipping" value="7">7 Day Free Shipping</input> <br>
+                <input type="radio" name="shipping" value="3">3 Day Shipping (+$5.00)</input> <br>
+                <input type="radio" name="shipping" value="1">1 Day Shipping (+$50.00)</input> <br>
+                <br>
+                <button type="submit">Buy</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+    </body>
+</html>
